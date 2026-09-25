@@ -1,0 +1,251 @@
+.certifications {
+  background: var(--bg-base);
+  padding: 6rem 0;
+  position: relative;
+}
+
+.certifications-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.cert-lead {
+  max-width: 60ch;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+.cert-telemetry-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.85rem;
+  background: rgba(114, 92, 255, 0.08);
+  border: 1px solid rgba(114, 92, 255, 0.2);
+  border-radius: 4px;
+}
+
+.cert-telemetry-count {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-bright, #8b7cff);
+}
+
+.cert-telemetry-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  color: #94a3b8;
+}
+
+/* ── Technical Register Table ── */
+.cert-table {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  background: #0e1117;
+  overflow: hidden;
+}
+
+.cert-table-header {
+  display: grid;
+  grid-template-columns: 55px 1.7fr 1.3fr 1.1fr 120px;
+  padding: 1rem 1.75rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-family: var(--font-mono, monospace);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  color: var(--text-dim, #64748b);
+  text-transform: uppercase;
+}
+
+.cert-row {
+  display: grid;
+  grid-template-columns: 55px 1.7fr 1.3fr 1.1fr 120px;
+  align-items: center;
+  padding: 1.4rem 1.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  transition: background 0.25s ease, border-color 0.25s ease;
+  position: relative;
+}
+
+.cert-row:last-child {
+  border-bottom: none;
+}
+
+.cert-row:hover {
+  background: #131722;
+}
+
+.cert-cell-idx {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--accent, #725cff);
+}
+
+.cert-cell-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.cert-name {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  letter-spacing: -0.01em;
+}
+
+.cert-provider-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cert-provider-pill {
+  display: inline-block;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  color: var(--accent-bright, #8b7cff);
+  text-transform: uppercase;
+}
+
+.cert-date-text {
+  font-size: 0.72rem;
+  color: #64748b;
+}
+
+.cert-domain-text {
+  font-size: 0.88rem;
+  color: var(--text-secondary, #94a3b8);
+}
+
+.cert-code-tag {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.65rem;
+  letter-spacing: 0.08em;
+  color: #64748b;
+  background: rgba(255, 255, 255, 0.03);
+  padding: 0.25rem 0.55rem;
+  border-radius: 3px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.cert-cell-action {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Button group for Download & View */
+.cert-btn-group {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+/* Base PDF Action Button */
+.cert-pdf-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 0.32rem 0.6rem;
+  border-radius: 4px;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+}
+
+.cert-download-btn {
+  color: #c4b5fd;
+  background: rgba(139, 124, 255, 0.12);
+  border-color: rgba(139, 124, 255, 0.35);
+}
+
+.cert-download-btn:hover {
+  background: rgba(139, 124, 255, 0.25);
+  border-color: rgba(139, 124, 255, 0.7);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.cert-view-btn {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.08);
+  border-color: rgba(56, 189, 248, 0.25);
+}
+
+.cert-view-btn:hover {
+  background: rgba(56, 189, 248, 0.2);
+  border-color: rgba(56, 189, 248, 0.55);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.cert-verified-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: #94a3b8;
+}
+
+.cert-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 6px rgba(74, 222, 128, 0.6);
+}
+
+/* ── Responsive Table ── */
+@media (max-width: 960px) {
+  .cert-table-header {
+    display: none;
+  }
+
+  .cert-row {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    padding: 1.5rem;
+  }
+
+  .cert-cell-idx {
+    display: none;
+  }
+
+  .cert-cell-action {
+    justify-content: flex-start;
+    margin-top: 0.5rem;
+  }
+
+  .cert-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

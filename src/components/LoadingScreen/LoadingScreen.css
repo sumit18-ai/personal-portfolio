@@ -1,0 +1,71 @@
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: #07080A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.loading-screen--exit {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.loading-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.loading-monogram {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  font-size: 3.5rem;
+  letter-spacing: -0.06em;
+  line-height: 1;
+  animation: fadeIn 0.4s ease forwards;
+  display: flex;
+  gap: 0.05em;
+}
+
+.loading-monogram span { color: #F0F2F5; }
+.loading-monogram .accent { color: #8B7CFF; }
+
+.loading-name {
+  font-family: 'Manrope', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(240, 242, 245, 0.4);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.loading-name--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.loading-bar-wrap {
+  width: 180px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.loading-bar-wrap--visible { opacity: 1; }
+
+.loading-bar-track {
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+  overflow: hidden;
+}
+
+.loading-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #3A2FA0, #8B7CFF);
+  transition: width 0.02s linear;
+}

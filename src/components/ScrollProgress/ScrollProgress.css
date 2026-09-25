@@ -1,0 +1,57 @@
+.scroll-progress {
+  position: fixed;
+  right: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 800;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sp-dot {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: none;
+  border: none;
+  cursor: none;
+  padding: 0;
+  justify-content: flex-end;
+  opacity: 0.35;
+  transition: opacity 0.3s ease;
+}
+
+.sp-dot:hover,
+.sp-dot--active {
+  opacity: 1;
+}
+
+.sp-num {
+  font-size: 0.55rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+  line-height: 1;
+}
+
+.sp-dot--active .sp-num { color: var(--accent-bright); }
+
+.sp-line {
+  display: block;
+  width: 12px;
+  height: 1px;
+  background: var(--text-dim);
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.sp-dot--active .sp-line {
+  width: 20px;
+  background: var(--accent);
+}
+
+/* Hide on small screens */
+@media (max-width: 900px) {
+  .scroll-progress { display: none; }
+}

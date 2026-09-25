@@ -1,0 +1,240 @@
+.experience {
+  background: var(--bg-base);
+  position: relative;
+  padding: 6rem 0;
+}
+
+.experience-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.exp-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-bottom: 3.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.exp-lead {
+  max-width: 60ch;
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+.exp-telemetry-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.35rem 0.85rem;
+  background: rgba(114, 92, 255, 0.08);
+  border: 1px solid rgba(114, 92, 255, 0.22);
+  border-radius: 4px;
+}
+
+.exp-telemetry-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-bright, #8b7cff);
+  box-shadow: 0 0 8px rgba(139, 124, 255, 0.6);
+}
+
+.exp-telemetry-text {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--accent-bright, #8b7cff);
+}
+
+/* ── Wide Two-Column List ── */
+.exp-wide-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.exp-card {
+  display: grid;
+  grid-template-columns: minmax(300px, 360px) 1fr;
+  gap: 3.5rem;
+  padding: 2.75rem 2.5rem;
+  background: #0e1117;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 6px;
+  position: relative;
+  transition: border-color 0.3s ease, background 0.3s ease, transform 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.exp-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.exp-card:hover {
+  background: #121620;
+  border-color: rgba(114, 92, 255, 0.3);
+}
+
+/* ── Left Column: Meta ── */
+.exp-col-left {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  padding-right: 2rem;
+}
+
+.exp-header-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.exp-ref-code {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  color: var(--accent, #725cff);
+}
+
+.exp-status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #4ade80;
+  background: rgba(74, 222, 128, 0.08);
+  border: 1px solid rgba(74, 222, 128, 0.25);
+  padding: 0.15rem 0.5rem;
+  border-radius: 3px;
+}
+
+.exp-status-ping {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 6px #4ade80;
+}
+
+.exp-company-name {
+  font-family: 'Manrope', sans-serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #f1f5f9;
+  margin-top: 0.25rem;
+}
+
+.exp-role-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent-bright, #8b7cff);
+  letter-spacing: -0.01em;
+}
+
+.exp-period-wrap {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-dim, #94a3b8);
+  font-size: 0.8rem;
+  margin-top: 0.25rem;
+}
+
+.exp-skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1.25rem;
+}
+
+.exp-skill-tag {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+}
+
+/* ── Right Column: Responsibilities ── */
+.exp-col-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.exp-responsibilities-title {
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  color: var(--text-dim, #64748b);
+  margin-bottom: 1.25rem;
+  text-transform: uppercase;
+}
+
+.exp-bullet-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.exp-bullet-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.exp-bullet-marker {
+  width: 6px;
+  height: 6px;
+  margin-top: 0.5rem;
+  background: var(--accent, #725cff);
+  transform: rotate(45deg);
+  flex-shrink: 0;
+  box-shadow: 0 0 6px rgba(114, 92, 255, 0.5);
+}
+
+.exp-bullet-text {
+  font-size: 0.93rem;
+  line-height: 1.65;
+  color: #cbd5e1;
+}
+
+/* ── Responsive Behavior ── */
+@media (max-width: 960px) {
+  .exp-card {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 1.75rem;
+  }
+
+  .exp-col-left {
+    border-right: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+  }
+
+  .exp-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

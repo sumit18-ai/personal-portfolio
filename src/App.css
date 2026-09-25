@@ -1,0 +1,14 @@
+/* App-level spacers and section transitions */
+#main-content {
+  position: relative;
+}
+
+/* Dividers between major sections */
+#about,
+#experience,
+#projects,
+#skills,
+#certifications,
+#contact {
+  border-top: 1px solid var(--border);
+}
