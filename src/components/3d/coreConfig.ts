@@ -2,11 +2,13 @@
  * Aeris Core 3D Configuration Constants
  * Centralizes all visual, material, lighting, performance, and interaction settings.
  */
+const BASE = import.meta.env.BASE_URL;
+
 export const CORE_CONFIG = {
   // Asset Paths
-  modelPath: '/models/aeris-core/aeris_core.glb',
-  dracoPath: '/draco/',
-  fallbackRawPath: '/models/aeris-core/aeris_core_raw.glb',
+  modelPath: `${BASE}models/aeris-core/aeris_core.glb`,
+  dracoPath: `${BASE}draco/`,
+  fallbackRawPath: `${BASE}models/aeris-core/aeris_core_raw.glb`,
 
   // Geometry & Scale
   scale: 1.39,

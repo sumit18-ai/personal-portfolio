@@ -2,6 +2,8 @@
  * Centralized Contact and Social Profile Information
  * Extracted directly from official ATS Resume (Placement File).
  */
+const BASE = import.meta.env.BASE_URL;
+
 export const CONTACT_INFO = {
   name: 'Sumit Singh',
   title: 'Computer Engineering Student · Full-Stack Developer · AI/ML Enthusiast',
@@ -13,7 +15,7 @@ export const CONTACT_INFO = {
   email: 'singhsumitas200905@gmail.com',
   github: 'https://github.com/sumit18-ai',
   linkedin: 'https://www.linkedin.com/in/singhsumit200905/',
-  resumeUrl: '/Sumit_Singh_ATS_Resume.pdf',
+  resumeUrl: `${BASE}Sumit_Singh_ATS_Resume.pdf`,
   resumeFilename: 'Sumit_Singh_ATS_Resume.pdf',
 } as const;
 

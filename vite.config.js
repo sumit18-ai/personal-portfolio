@@ -9,7 +9,8 @@ const pdfDownloadPlugin = () => ({
   configureServer(server) {
     server.middlewares.use((req, res, next) => {
       const rawUrl = req.url || '';
-      const url = rawUrl.split('?')[0];
+      const cleanUrl = rawUrl.split('?')[0];
+      const url = cleanUrl.replace(/^\/personal-portfolio/, '');
       const isInline = rawUrl.includes('view=1') || rawUrl.includes('inline=1');
 
       if (url === '/Sumit_Singh_ATS_Resume.pdf' || url === '/ats_resume.pdf' || url === '/resume.pdf' || url === '/api/download-resume') {
@@ -52,5 +53,6 @@ const pdfDownloadPlugin = () => ({
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/personal-portfolio/',
   plugins: [react(), pdfDownloadPlugin()],
 });

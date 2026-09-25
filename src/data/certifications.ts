@@ -8,6 +8,8 @@ export interface Certification {
   issueDate?: string;
 }
 
+const BASE = import.meta.env.BASE_URL;
+
 export const certifications: Certification[] = [
   {
     id: 'cisco-modern-ai',
@@ -15,7 +17,7 @@ export const certifications: Certification[] = [
     provider: 'Cisco Networking Academy',
     domain: 'Artificial Intelligence',
     code: 'CISCO // 5402EEB2',
-    pdfPath: '/certificates/cisco_modern_ai.pdf',
+    pdfPath: `${BASE}certificates/cisco_modern_ai.pdf`,
     issueDate: 'August 2026',
   },
   {
@@ -24,7 +26,7 @@ export const certifications: Certification[] = [
     provider: 'Infosys Springboard',
     domain: 'Machine Learning & AI',
     code: 'INFOSYS // SPRINGBOARD-AI',
-    pdfPath: '/certificates/infosys_certificate.png',
+    pdfPath: `${BASE}certificates/infosys_certificate.png`,
     issueDate: 'September 2026',
   },
   {
@@ -33,7 +35,7 @@ export const certifications: Certification[] = [
     provider: 'Cisco Networking Academy',
     domain: 'Systems & Infrastructure',
     code: 'CISCO // 15671052',
-    pdfPath: '/certificates/cisco_operating_systems.pdf',
+    pdfPath: `${BASE}certificates/cisco_operating_systems.pdf`,
     issueDate: 'August 2026',
   },
   {
@@ -42,7 +44,7 @@ export const certifications: Certification[] = [
     provider: 'HackerRank',
     domain: 'Core Software Engineering',
     code: 'HACKERRANK // JAVA-CERT',
-    pdfPath: '/certificates/hackerrank_java_basic.pdf',
+    pdfPath: `${BASE}certificates/hackerrank_java_basic.pdf`,
     issueDate: '2026',
   },
   {
@@ -51,7 +53,7 @@ export const certifications: Certification[] = [
     provider: 'HackerRank',
     domain: 'Databases & Query Optimization',
     code: 'HACKERRANK // SQL-CERT',
-    pdfPath: '/certificates/hackerrank_sql_basic.pdf',
+    pdfPath: `${BASE}certificates/hackerrank_sql_basic.pdf`,
     issueDate: '2026',
   },
 ];
